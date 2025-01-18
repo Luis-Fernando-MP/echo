@@ -4,9 +4,9 @@ import NextTopLoader from 'nextjs-toploader'
 import type { JSX, ReactNode } from 'react'
 import { Toaster } from 'react-hot-toast'
 
+import { ConvexClientProvider } from './context/ConvexClientProvider'
 import './globals.css'
 import { metadata, viewport } from './metadata'
-import Providers from './providers'
 import './style.scss'
 
 interface IRootLayout {
@@ -18,7 +18,7 @@ const RootLayout = async ({ children }: IRootLayout): Promise<JSX.Element> => {
     <html lang='es'>
       <body className={`${bodyFonts}`}>
         <NextTopLoader color='rgb(var(--tn-primary))' showSpinner={false} />
-        <Providers>{children}</Providers>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
         <Toaster
           position='top-center'
           toastOptions={{
