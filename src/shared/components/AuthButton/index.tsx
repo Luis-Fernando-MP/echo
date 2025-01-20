@@ -14,7 +14,7 @@ import { type JSX } from 'react'
 
 import './style.scss'
 
-const AuthButtons = (): JSX.Element => {
+const AuthButton = (): JSX.Element => {
   const currentPath = usePathname()
   return (
     <aside className='authUserButton'>
@@ -41,4 +41,4 @@ const AuthButtons = (): JSX.Element => {
   )
 }
 
-export default AuthButtons
+export default AuthButton
